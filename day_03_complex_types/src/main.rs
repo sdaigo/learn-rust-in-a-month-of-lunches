@@ -1,3 +1,6 @@
+mod clean_match;
+mod pattern_match;
+
 fn match_colors(color: (i32, i32, i32)) {
     match color {
         (r, _, _) if r < 10 => println!("not much red"),
@@ -112,4 +115,12 @@ fn main() {
     for i in 1..=5 {
         println!("i = {i}");
     }
+
+    println!("\n----------------\n");
+
+    pattern_match::main();
+
+    println!("\n----------------\n");
+
+    clean_match::main();
 }
